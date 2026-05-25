@@ -7,13 +7,11 @@
   "ioValues": [
     {
       "name": "Dow_length",
-      "ioValue": 10,
-      "currentEquation": "10"
+      "ioValue": 10
     },
     {
       "name": "Dow_Diam",
-      "ioValue": 1,
-      "currentEquation": "1"
+      "ioValue": 1
     }
   ],
   "topLevel": true,
@@ -44,15 +42,15 @@
     },
     {
       "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.2621951219512195,
+      "x": 0.0264,
+      "y": 0.16,
       "uniqueID": "id-9676",
       "name": "Dow_length"
     },
     {
       "atomType": "Input",
-      "x": 0.025384615384615384,
-      "y": 0.400234521575985,
+      "x": 0.0264,
+      "y": 0.256,
       "uniqueID": "id-9679",
       "name": "Dow_Diam"
     },
@@ -73,27 +71,9 @@
       ]
     },
     {
-      "atomType": "Code",
-      "x": 0.42542787286063566,
-      "y": 0.771341463414634,
-      "uniqueID": "id-9698",
-      "ioValues": [
-        {
-          "name": "diam",
-          "ioValue": 5
-        },
-        {
-          "name": "length",
-          "ioValue": 10
-        }
-      ],
-      "codeVersion": 1,
-      "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"diam\", type: \"number\", defaultValue: 5 },\n  { inputName: \"length\", type: \"number\", defaultValue: 10 }\n];\n\nreturn `Wood dowel ${diam}in diameter, ${length}in length`"
-    },
-    {
       "atomType": "Add-BOM-Tag",
-      "x": 0.7098614506927465,
-      "y": 0.5487804878048781,
+      "x": 0.6474966170500677,
+      "y": 0.7317073170731707,
       "uniqueID": "id-9705",
       "name": "Add BOM Tag",
       "ioValues": [
@@ -104,7 +84,7 @@
         {
           "name": "Item Name",
           "ioValue": "Wood dowel 5in diameter, 10in length",
-          "currentEquation": "Wood dowel 5in diameter, 10in length"
+          "currentEquation": "New Item"
         },
         {
           "name": "Number Needed",
@@ -125,6 +105,24 @@
         "costUSD": 0,
         "source": ""
       }
+    },
+    {
+      "atomType": "Code",
+      "x": 0.42677448337825696,
+      "y": 0.7225609756097561,
+      "uniqueID": "id-9698",
+      "ioValues": [
+        {
+          "name": "diam",
+          "ioValue": 5
+        },
+        {
+          "name": "length",
+          "ioValue": 10
+        }
+      ],
+      "interpreterVersion": 0,
+      "code": "\n// Example Code\nconst Inputs = [\n  { inputName: \"diam\", type: \"number\", defaultValue: 5 },\n  { inputName: \"length\", type: \"number\", defaultValue: 10 }\n];\n\nreturn `Wood dowel ${diam}in diameter, ${length}in length`"
     }
   ],
   "allConnectors": [
@@ -149,14 +147,14 @@
       "ap2ID": "id-9705"
     },
     {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-9682",
+      "ap2ID": "id-9671"
+    },
+    {
       "ap2Name": "Item Name",
       "ap1ID": "id-9698",
       "ap2ID": "id-9705"
-    },
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-9705",
-      "ap2ID": "id-9671"
     }
   ],
   "unitsKey": "Inches",
